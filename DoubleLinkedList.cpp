@@ -24,7 +24,7 @@ public:
     void addNode()
     {
         int nim;
-        string nim;
+        string nm;
         cout << "\nEnter the roll number of the student : ";
         cin >> nim;
 
@@ -255,5 +255,5 @@ int main()
         cin.get();
         cout << endl;
         system("clear");
-    } while (choice != '8');
+    } while (choice != '6');
 }
