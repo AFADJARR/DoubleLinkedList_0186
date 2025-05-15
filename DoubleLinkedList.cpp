@@ -157,6 +157,62 @@ public:
          return;
        }
 
+       //Step 1: Move to last Node
+       Node *currentNode = START;
+       int i = 0;
+       while (currentNode->next != NULL)
+       {
+        currentNode = currentNode->next;
+        i++;
+       }
+
+       //Step 2: Traverse backward
+       cout <<"\nReccord in desscending order of roll number are\n";
+       while (currentNode != NULL)
+       {
+        cout << 1 + 1 << ", " << currentNode->noMhs << " " << endl;
+        
+        //Step 3: Move to previous node
+        currentNode = currentNode->prev;
+        i--;
+       } 
+    }
+
+    void searchData()
+    {
+        if(START = NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        int rollno;
+        cout << "\nEnter the roll number to search: ";
+        cin >> rollno;
+
+        Node *current = START;
+
+        //Step 1: Traverse to find matching roll number
+        while(current != NULL && current->noMhs != rollno)
+            current = current->next;
+
+        //Step 2: Output Result
+        if(current = NULL)
+        {
+            cout << "Reccord not found \n";
+        }
+        else
+        {
+            cout << "Reccord Found\n";
+            cout << "Roll Number: " << current->noMhs << endl;
+        }
     }
 
 };
+
+int main()
+{
+    DoubleLinkedList list;
+    char choice;
+    
+}
