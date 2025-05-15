@@ -96,6 +96,24 @@ public:
 
         Node *current = START;
 
+        //Step 1: Traverse the list to find the node
+        while (current != NULL && current->noMhs != rollno)
+            current =  current->next;
+
+        if(current = NULL)
+        {
+            cout << "Reccord not found" << endl;
+            return;
+        }
+
+        //Step 2: if node is at the beginning
+        if(current == START)
+        {
+            START = current->next; // Step 2a: START.next
+            if (START != NULL)
+                START->prev = NULL; //Step 22b: START.prev = NULL
+        }
+        
     }
 
 }
